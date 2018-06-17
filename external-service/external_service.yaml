@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service
+spec:
+  ports:
+  - name: www
+    port: 80
+    targetPort: 80
+    protocol: TCP

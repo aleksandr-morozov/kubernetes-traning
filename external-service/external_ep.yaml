@@ -1,0 +1,10 @@
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: service
+subsets:
+  - addresses:
+      - ip: 174.128.60.201
+    ports:
+      - name: www
+        port: 80
