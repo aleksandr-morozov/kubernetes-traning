@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-resources
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-resources
+  template:
+    metadata:
+      labels:
+        app: nginx-resources
+    spec:
+      containers:
+      - name: nginx-resources
+        image: nginx:1.12
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+           memory: "6Gi"
