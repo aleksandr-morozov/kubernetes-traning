@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-node-selector
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-node-selector
+  template:
+    metadata:
+      labels:
+        app: nginx-node-selector
+    spec:
+      nodeSelector:
+        type: node-selector
+      containers:
+      - name: nginx
+        image: nginx:1.12
+        ports:
+        - containerPort: 80
+
