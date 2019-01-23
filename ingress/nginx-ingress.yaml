@@ -4,7 +4,7 @@ metadata:
   name: nginx
 spec:
   rules:
-  - host: ecsd00300784.epam.com
+  - host: kube-master.moscow.epam.com
     http:
       paths:
       - backend:
