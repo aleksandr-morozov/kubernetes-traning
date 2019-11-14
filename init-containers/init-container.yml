@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: init-container
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: init-container
   template:
     metadata:
       labels:
